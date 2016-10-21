@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   word: {
     color: "#FFFFFF",
     fontWeight: "bold",
-    fontSize: 40
+    fontSize: 60
   }
 });
 

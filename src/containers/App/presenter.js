@@ -30,7 +30,9 @@ class App extends Component {
         if (route.index === 0) {
           return(
             <View style={ styles.container }>
-              <Header navigator={ navigator } />
+              <Header
+                route={ route }
+                navigator={ navigator } />
               <StageSelector navigator={ navigator } />
             </View>
           );
@@ -38,7 +40,9 @@ class App extends Component {
         if (route.index === 1) {
           return(
             <View style={ styles.container }>
-              <Header navigator={ navigator } />
+              <Header
+                route={ route }
+                navigator={ navigator } />
               <WordRandomizer
                 data={ route.data }
                 navigator={ navigator } />
@@ -52,6 +56,7 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'stretch'
   }
 });
 

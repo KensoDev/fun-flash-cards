@@ -35,7 +35,5 @@ export default function native (platform) {
       );
     }
   }
-
   AppRegistry.registerComponent('FunFlashCards', () => Principium)
-
 }
