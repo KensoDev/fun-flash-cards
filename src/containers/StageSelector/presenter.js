@@ -69,10 +69,13 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
+    color: '#FFF',
+    fontWeight: 'bold',
+    fontSize: 25,
   },
   item: {
     justifyContent: 'center',
-    backgroundColor: '#CCC',
+    backgroundColor: '#5FA14A',
     margin: 10,
     width: 100,
     height: 100
