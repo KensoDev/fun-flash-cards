@@ -47,10 +47,18 @@ class WordRandomizer extends Component {
 
     return (
       <View style={ styles.container }>
+
+        <View style={ styles.message }>
+          <Text style={ styles.messageText }>
+            Press anywhere on the screen for the next word
+          </Text>
+        </View>
+
         <TouchableHighlight
           underlayColor="#8445B3"
           onPress={ () => this.randomWord() }
           style={ styles.wordContainer }>
+
           <Text style={ styles.word }>
             { this.state.currentWord }
           </Text>
@@ -61,9 +69,18 @@ class WordRandomizer extends Component {
 }
 
 const styles = StyleSheet.create({
+  message: {
+    margin: 10,
+    padding: 10,
+    backgroundColor: '#5FA14A',
+  },
+  messageText: {
+    color: '#FFF'
+  },
   container: {
     flex: 1,
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: '#8445B3',
   },
   wordContainer: {
     flex: 1,

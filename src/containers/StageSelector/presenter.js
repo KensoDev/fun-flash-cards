@@ -6,7 +6,6 @@ import {
   View,
   Text,
   Image
-
 } from 'react-native'
 
 class StageSelector extends Component {
@@ -45,6 +44,11 @@ class StageSelector extends Component {
       <Image
         style={styles.container}
         source={require('./images/chalk-background.jpg')}>
+
+        <View style={ styles.message }>
+          <Text style={ styles.messageText }>Choose a group from the list below</Text>
+        </View>
+
         <ListView contentContainerStyle={styles.list}
           dataSource={datasource}
           renderRow={ this.renderRow } />
@@ -54,6 +58,14 @@ class StageSelector extends Component {
 }
 
 const styles = StyleSheet.create({
+  message: {
+    margin: 10,
+    padding: 10,
+    backgroundColor: '#8445B3'
+  },
+  messageText: {
+    color: '#FFF'
+  },
   container: {
     flex: 1,
     width: undefined,
@@ -62,10 +74,6 @@ const styles = StyleSheet.create({
   },
   list: {
     flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
   },
   text: {
     textAlign: 'center',
@@ -74,10 +82,10 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   item: {
+    flex: 1,
     justifyContent: 'center',
     backgroundColor: '#5FA14A',
     margin: 10,
-    width: 100,
     height: 100
   }
 });
